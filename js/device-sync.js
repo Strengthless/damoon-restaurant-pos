@@ -1,4 +1,4 @@
-const socket = io(`http://localhost:3000`)
+const socket = io(`http://128.199.204.7:3000`)
 
 var dev = 0
 
