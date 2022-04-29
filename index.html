@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.simulate.js"></script>
+    <script src="js/jquery.simulate.ext.js"></script>
+    <script src="js/jquery.ui.touch-punch.js"></script>
+    <script src="js/jquery.simulate.drag-n-drop.js"></script>
+    <script src="js/receipt-interaction.js"></script>
+    <script src="js/tabs-switching.js"></script>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="js/device-sync.js"></script>
+</head>
+
+<body>
+    <div id="order-info" class="top-container">Testing, you are now in the order screen</div>
+    <div id="dineinC" class="container">
+        <div id="dialog-confirm" title="刪除訂單" style="display:none">
+            <p><span class="fa-solid fa-triangle-exclamation"
+                    style="float:left; margin:12px 12px 20px 0;"></span>你確認要刪除此訂單嗎？此動作將不可復原。</p>
+        </div>
+        <div class="column-1">
+            <div class="table large" id="B13">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+        </div>
+        <div class="column-2">
+            <div class="table large" id="B8">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="table large" id="B9">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="row">
+                <div class="table" id="B10">
+                    <p></p>
+                    <div class="plus-sign"></div>
+                </div>
+                <div class="table" id="B11">
+                    <p></p>
+                    <div class="plus-sign"></div>
+                </div>
+                <div class="table" id="B12">
+                    <p></p>
+                    <div class="plus-sign"></div>
+                </div>
+            </div>
+            <div class="table large" id="A1">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+        </div>
+        <div class="column-3">
+            <div class="table" id="B14">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+        </div>
+        <div class="column-4">
+            <div class="table" id="B1">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="table" id="B2">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="table" id="B3">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="table" id="B4">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="table" id="B5">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="table" id="B6">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+            <div class="table" id="B7">
+                <p></p>
+                <div class="plus-sign"></div>
+            </div>
+        </div>
+    </div>
+    <div id="dineinC" class="receipts"></div>
+    <div id="takeawayC" class="container">
+        外賣介面
+    </div>
+    <div id="toolboxC" class="container">
+        Toolbox section: W.I.P.
+    </div>
+    <div id="nav-bar">
+        <ul>
+            <div class="items">
+                <li class="icon"><img src="images/icon.png" alt=""></li>
+                <li><a id="dinein"><i class="fa-solid fa-utensils"></i></a></li>
+                <li><a id="takeaway" class="inactive"><i class="fa-solid fa-person-walking-luggage"></i></a></li>
+                <li class="toggle1 push"><i class="fa-solid fa-trash-can"></i></li>
+                <li class="toggle1"><a id="toolbox" class="inactive"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+                </li>
+                <li class="large-bin toggle2 push" style="display: none;"><i class="fa-solid fa-trash-can"></i></li>
+            </div>
+        </ul>
+    </div>
+</body>
+
+</html>
