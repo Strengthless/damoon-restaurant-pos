@@ -8,9 +8,9 @@
 	"orientation": "landscape",
 	"icons": [
 		{
-			"src": "images/icon.png",
+			"src": "images/icon-opaque.png",
 			"type": "image/png",
-			"sizes": "226x227"
+			"sizes": "262x263"
 		}
 	]
 }
