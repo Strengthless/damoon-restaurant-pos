@@ -1,220 +1,223 @@
-@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+/* @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) { */
 
 
-    :root {
-        /* Color palette for design: https://colorhunt.co/palette/1a374d4068826998abb1d0e0 */
-        --dark-color: #1A374D;
-        --main-color: #406882;
-        --light-color: #6998AB;
-        --lighter-color: #B1D0E0;
-        --lightest-color: #e6eef2;
-        --less-vibrant-white: #dbdbdb;
-        --disabled-gray: #adadad;
-        --dark-gray: #242929;
-        --empty-order: #e2564b;
-        --making-order: #f4b55a;
-        --completed-order: #3ab49e;
-        --paid-order: #21a8d2;
-    }
+:root {
+    /* Color palette for design: https://colorhunt.co/palette/1a374d4068826998abb1d0e0 */
+    --dark-color: #1A374D;
+    --main-color: #406882;
+    --light-color: #6998AB;
+    --lighter-color: #B1D0E0;
+    --lightest-color: #e6eef2;
+    --less-vibrant-white: #dbdbdb;
+    --disabled-gray: #adadad;
+    --dark-gray: #242929;
+    --empty-order: #e2564b;
+    --making-order: #f4b55a;
+    --completed-order: #3ab49e;
+    --paid-order: #21a8d2;
+}
 
-    @font-face {
-        font-family: 'Ubuntu';
-        src: local('fonts/Ubuntu-Light') format('ttf');
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'Ubuntu';
+    src: local('fonts/Ubuntu-Light') format('ttf');
+    font-style: normal;
+}
 
 
-    body {
-        margin: 0;
-        font-family: Ubuntu, sans-serif;
-        overflow-x: hidden;
-        background-color: var(--lightest-color);
-    }
+body {
+    margin: 0;
+    font-family: Ubuntu, sans-serif;
+    overflow-x: hidden;
+    background-color: var(--lightest-color);
+}
 
-    img {
-        -webkit-touch-callout: none;
-    }
+img {
+    -webkit-touch-callout: none;
+}
 
-    #order-info {
-        position: absolute;
-        z-index: 5;
-        width: 100vw;
-        height: 100vh;
-        background-color: var(--lightest-color);
-    }
+#order-info {
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--lightest-color);
+}
 
-    #dineinC.container {
-        overflow-y: hidden;
-        display: flex;
-        flex-wrap: wrap;
-        width: calc(100vw - 90px);
-        justify-content: center;
-    }
+#dineinC.container {
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100vw - 90px);
+    justify-content: center;
+}
 
-    #dineinC .column-1,
-    #dineinC .column-2,
-    #dineinC .column-3,
-    #dineinC .column-4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+#dineinC .column-1,
+#dineinC .column-2,
+#dineinC .column-3,
+#dineinC .column-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    #dineinC .column-3,
-    #dineinC .column-1 {
-        flex-direction: column-reverse;
-        margin: 0 20;
-    }
+#dineinC .column-3,
+#dineinC .column-1 {
+    flex-direction: column-reverse;
+    margin: 0 20;
+}
 
-    #dineinC #B13 {
-        margin-bottom: 263px;
-        margin-top: 263px;
-    }
+#dineinC #B13 {
+    margin-bottom: 263px;
+    margin-top: 263px;
+}
 
-    #dineinC .column-1 {
-        margin-right: 50px;
-    }
+#dineinC .column-1 {
+    margin-right: 50px;
+}
 
-    #dineinC .column-2 {
-        gap: 105px;
-    }
+#dineinC .B9,
+#dineinC #row {
+    /* The gap CSS property doesn't work for columns in iOS devices */
+    margin-top: 57.5px;
+    margin-bottom: 57.5px;
+}
 
-    #toolboxC {
-        overflow-y: hidden;
-    }
+#toolboxC {
+    overflow-y: hidden;
+}
 
-    #takeawayC {
-        height: 140vh;
-    }
+#takeawayC {
+    height: 140vh;
+}
 
-    .table {
-        width: 90px;
-        height: 80px;
-        padding: 5px;
-        float: left;
-        margin: 5px;
-        color: var(--less-vibrant-white);
-        border-radius: 5px;
-        background-color: var(--dark-gray);
-        position: relative;
-        display: block;
-    }
+.table {
+    width: 90px;
+    height: 80px;
+    padding: 5px;
+    float: left;
+    margin: 5px;
+    color: var(--less-vibrant-white);
+    border-radius: 5px;
+    background-color: var(--dark-gray);
+    position: relative;
+    display: block;
+}
 
-    .table.large {
-        width: 145px;
-        height: 65px;
-    }
+.table.large {
+    width: 145px;
+    height: 65px;
+}
 
-    .table p {
-        font-size: 1.4em;
-        margin: 0.15em 0 0 0.15em;
-    }
+.table p {
+    font-size: 1.4em;
+    margin: 0.15em 0 0 0.15em;
+}
 
-    .plus-sign {
-        margin: 0;
-        position: absolute;
-        top: 56%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 25px;
-        content: url(../images/plus_sign.png);
-    }
+.plus-sign {
+    margin: 0;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    content: url(../images/plus_sign.png);
+}
 
-    #receipts {
-        height: 0;
-        width: 0;
-
-    }
-
-    .receipt {
-        margin: 0;
-        position: absolute;
-        padding-top: 5px;
-        height: 55px;
-        content: url(../images/receipt.png);
-        filter: contrast(0.8);
-        z-index: 1;
-    }
-
-    .container {
-        position: absolute;
-        width: calc(100vw - 80px);
-        height: calc(100vh - 30px);
-        padding: 15px;
-    }
-
-    #nav-bar {
-        position: fixed;
-        right: 0;
-        height: 100vh;
-        width: 60px;
-        background-color: var(--main-color);
-        /* margin: 0; */
-    }
-
-    #nav-bar img {
-        width: 75%;
-        padding-top: 15px;
-    }
-
-    #nav-bar .icon {
-        padding-bottom: 30px;
-    }
-
-    #nav-bar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        height: 100vh;
-    }
-
-    #nav-bar a {
-        z-index: 2;
-    }
-
-    #nav-bar ul .items li {
-        margin-top: 10px;
-        height: 50px;
-        width: auto;
-    }
-
-    #nav-bar ul li i {
-        color: var(--disabled-gray);
-        text-shadow: 1px 1px 5px var(--dark-color);
-        font-size: 30px;
-    }
-
-    #nav-bar ul li a.inactive i {
-        color: var(--less-vibrant-white);
-    }
-
-    #nav-bar .push {
-        margin-top: auto !important;
-    }
-
-    #nav-bar ul li.push i {
-        color: var(--less-vibrant-white);
-    }
-
-    #nav-bar .items {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    #nav-bar .items .bottom-item {
-        vertical-align: bottom;
-    }
-
-    #nav-bar .large-bin {
-        flex-grow: 0.4;
-        background-color: var(--dark-color);
-    }
-
-    #nav-bar .large-bin i {
-        padding-top: 100px;
-    }
-
+#receipts {
+    height: 0;
+    width: 0;
 
 }
+
+.receipt {
+    margin: 0;
+    position: absolute;
+    padding-top: 5px;
+    height: 55px;
+    content: url(../images/receipt.png);
+    filter: contrast(0.8);
+    z-index: 1;
+}
+
+.container {
+    position: absolute;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 30px);
+    padding: 15px;
+}
+
+#nav-bar {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 60px;
+    background-color: var(--main-color);
+    /* margin: 0; */
+}
+
+#nav-bar img {
+    width: 75%;
+    padding-top: 15px;
+}
+
+#nav-bar .icon {
+    padding-bottom: 30px;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+}
+
+#nav-bar a {
+    z-index: 2;
+}
+
+#nav-bar ul .items li {
+    margin-top: 10px;
+    height: 50px;
+    width: auto;
+}
+
+#nav-bar ul li i {
+    color: var(--disabled-gray);
+    text-shadow: 1px 1px 5px var(--dark-color);
+    font-size: 30px;
+}
+
+#nav-bar ul li a.inactive i {
+    color: var(--less-vibrant-white);
+}
+
+#nav-bar .push {
+    margin-top: auto !important;
+}
+
+#nav-bar ul li.push i {
+    color: var(--less-vibrant-white);
+}
+
+#nav-bar .items {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#nav-bar .items .bottom-item {
+    vertical-align: bottom;
+}
+
+#nav-bar .large-bin {
+    flex-grow: 0.4;
+    background-color: var(--dark-color);
+}
+
+#nav-bar .large-bin i {
+    padding-top: 100px;
+}
+
+
+/* } */

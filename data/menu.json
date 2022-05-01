@@ -5,16 +5,7 @@
 				{
 					"name": "101 生蝦刺身",
 					"price": 95,
-					"options": [
-						{
-							"text": "唔好咁熟",
-							"price": 0
-						},
-						{
-							"text": "走辣椒",
-							"price": 0
-						}
-					]
+					"options": []
 				}
 			],
 			"2xx 沙律": {},

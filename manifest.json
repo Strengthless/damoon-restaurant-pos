@@ -1,0 +1,16 @@
+{
+	"name": "Damoon POS",
+	"short_name": "Damoon POS",
+	"start_url": "index.html",
+	"display": "standalone",
+	"background_color": "#406882",
+	"theme_color": "#1A374D",
+	"orientation": "landscape",
+	"icons": [
+		{
+			"src": "images/icon.png",
+			"type": "image/png",
+			"sizes": "226x227"
+		}
+	]
+}

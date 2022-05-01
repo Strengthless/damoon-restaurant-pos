@@ -4,6 +4,7 @@ $(function () {
 		drop: function (event, ui) {
 			snapToMiddle(ui.draggable, $(this), 400)
 			ui.draggable.data('table', $(this).attr('id'))
+			console.log('potentially call a sync request?')
 			updateTableColor()
 		},
 	})
@@ -39,6 +40,7 @@ $(function () {
 			setTimeout(() => {
 				ui.draggable[0].remove()
 			}, 550)
+			console.log('potentially call a sync request?')
 		},
 		create: function () {
 			$(this).hide()
@@ -54,6 +56,19 @@ $(function () {
 	})
 })
 
+// Updates table color according to the GUI location.
+function updateTableColor() {
+	$('.table').css('background-color', 'var(--dark-gray)')
+	$('.receipt').each(function () {
+		if ($(this).data().table == 'discard') return
+		$(`#${$(this).data().table}`).css(
+			'background-color',
+			`var(--${$(this).attr('status')})`
+		)
+	})
+}
+
+// Declares an instant toggle function for DOM elements.
 $.fn.quicktoggle = function () {
 	this.each(function () {
 		var $this = $(this)
