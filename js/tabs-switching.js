@@ -29,9 +29,6 @@ $(function () {
 		newReceipt(receiptCount, $(this).prev().text())
 		receiptCount += 1
 	})
-
-	// Lock to landscape orientation
-	screen.orientation.lock('landscape')
 })
 
 function showOrderDetails(type, id) {
