@@ -101,7 +101,7 @@ function newReceipt(receiptID, tableID) {
 			})
 			setTimeout(() => {
 				$(this).simulate('drag-n-drop', { dx: 1 })
-			}, 5)
+			}, 10)
 			// Event listener for receipt click
 			$('.receipt').click(function () {
 				showOrderDetails('dine-in', $(this).attr('id'))
